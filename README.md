@@ -10,13 +10,17 @@ Universidad de Costa Rica - Sistemas Empotrados de Tiempo Real - CI-0155
 - Jorge Ricardo Díaz Sagot (C12565)
 
 **Objetivos del laboratorio:**
-1. Revisión de la comunicación I2C.
-2. Revisión de las formas de programar el LCD.
-3. Programación del LCD incluyendo: texto sencillo, texto scrolling y animaciones.
+1. Uso del módulo LCD1602
+2. Conocimiento sobre el protocolo serial I2C
+3. Conocimiento sobre los componentes utilizados
+4. Diseño e implementación del LCD incluyendo:
+  - Texto sencillo
+  - Texto scrolling
+  - "Animaciones"
 
 ---
 
-### OBJ 1: Revisión de la comunicación I2C
+### OBJ 2: Conocimiento sobre el protocolo serial I2C
 
 #### Inter-integrated circuit (I2C) bus
 
@@ -43,7 +47,15 @@ Podemos observar que los conectores de **I2C** se dan por medio de los pines ana
 
 ---
 
-### OBJ 2: Revisión de las formas de programar el LCD
+### OBJ 3: Conocimiento sobre los componentes utilizados
+
+TODO @ISA
+
+---
+
+### OBJ 4: Programación del LCD (texto sencillo, scrolling y animaciones)
+
+#### Revisión de las formas de programar el LCD
 
 Para programar y utilizar pantallas LCD (como la LCD1602 o la LCD2004) se utilizan librerías oficiales y las funcionalidades del hardware. En este laboratorio, la exploración sobre las formas de programar el LCD abarca:
 
@@ -59,12 +71,9 @@ Esta información se obtuvo de [1].
 
 - **Animaciones:** Las pantallas LCD permiten crear e insertar gráficos vectoriales a medida mediante la definición de matrices (arreglos de bytes) de 5x8 píxeles. Estos patrones se dibujan visualmente, se convierten a código binario o hexadecimal, y se guardan en la memoria del dispositivo para mostrar formas únicas. La fuente [2] ensena como crear caracteres personalizados para el proposito de funciones LCD mas dinamicas.
 
-
----
-
-### OBJ 3: Programación del LCD (texto sencillo, scrolling y animaciones)
-
 #### Texto sencillo
+
+Diseño: [Laboratorio #4 - Liquid Crystal Display (LCD) Hello World](https://www.tinkercad.com/things/cIjcsSK1FTP-laboratorio-4-liquid-crystal-display-lcd-hello-world?sharecode=g8UwlarT3QCvULCgqoQ0eayPNNs1qK-MCkgNnNc4xHk)
 
 Video: [hello_world.mp4](./media/hello_world.mp4)
 
@@ -72,11 +81,15 @@ Codigo: [lcd_display.ino](./code/lcd_display/lcd_display.ino)
 
 #### Texto scrolling
 
+Diseño: [Laboratorio #4 - Liquid Crystal Display (LCD) Autoscroll](https://www.tinkercad.com/things/cih2mpGdvnV-laboratorio-4-liquid-crystal-display-lcd-autoscroll?sharecode=WtUM4_9ktNBCt_ETgbniWzJcT_eFNPF8749XIPibCFY)
+
 Video: [autoscroll.mp4](./media/autoscroll.mp4)
 
 Codigo: [lcd_display_autoscroll.ino](./code/lcd_display_autoscroll/lcd_display_autoscroll.ino)
 
 #### Animaciones
+
+Diseño: [Laboratorio #4 - Liquid Crystal Display (LCD) Casino](https://www.tinkercad.com/things/dqve9ozAi33-laboratorio-4-liquid-crystal-display-lcd-casino?sharecode=3_SfphVUupbPQ_M8Ji9SK-Rcx6fAe9pp9RoYP-7b-BE)
 
 Video: [casino_slots.mp4](./media/casino_slots.mp4)
 
