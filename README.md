@@ -1,10 +1,101 @@
 # lab-4-lcd-display
 
+## Laboratorio #4 - Liquid Crystal Display (LCD)
+
+Universidad de Costa Rica - Sistemas Empotrados de Tiempo Real - CI-0155
+
+**Integrantes:** 
+- Isabella Rodríguez Sánchez (C26701)
+- Esteban Isaac Baires Cerdas (C10844)
+- Jorge Ricardo Díaz Sagot (C12565)
+
+**Objetivos del laboratorio:**
+1. Revisión de la comunicación I2C.
+2. Revisión de las formas de programar el LCD.
+3. Programación del LCD incluyendo: texto sencillo, texto scrolling y animaciones.
+
+---
+
+### OBJ 1: Revisión de la comunicación I2C
+
+#### Inter-integrated circuit (I2C) bus
+
+- El I2C es un protocolo de comunicación local por buses. Este permite comunicación de forma serial bidireccional, half-duplex por medio de dos lineas, SDA(Serial Data) para los datos y SCL(Serial Clock) para el reloj.
+
+- Funciona por medio de una arquitectura maestro-aprendiz donde el microcontrolador en este caso el Arduino Uno R3 es el maestro y el dispositivo LCD es el aprendiz que sigue las ordenes del maestro.
+
+- Tambien se menciona que es un protocolo que puede manejar multiples dispositivos aprediz sin cables extra y prioriza el bajo consumo de energia por encima de la velocidad de transferencia de datos. 
+
+- Una parte importante del funcionamiento del protocolo es que usa un sistema de START/STOP para iniciar y finalizar la comunicación. Se produce un START cuando la linea SDA baja mientras la linea SCL se mantiene alta. Se produce un STOP cuando la linea SDA sube mientras la linea SCL se mantiene alta.
+
+> Todas estas características fueron obtenidas de [5] de las paginas 13 y 175 del libro del curso Embedded Systems Architecture 2nd Edition.
+
+#### Arduino R3
+Primero este es el esquema de componentes del Arduino Uno R3:
+
+![Esquema 1](./media/esquema1.png)
+![Esquema 2](./media/esquema2.png)
+![Iconos](./media/legend.png)
+
+Obtenido de [4] en su documentación de pinout.
+
+Podemos observar que los conectores de **I2C** se dan por medio de los pines analógicos **A4** y **A5** (**SDA** y **SCL** respectivamente). Y están duplicados de forma digital en los pines **D19** y **D18**.
+
+---
+
+### OBJ 2: Revisión de las formas de programar el LCD
+
+Para programar y utilizar pantallas LCD (como la LCD1602 o la LCD2004) se utilizan librerías oficiales y las funcionalidades del hardware. En este laboratorio, la exploración sobre las formas de programar el LCD abarca:
+
+- **Configuración y programas básicos:** Involucra la conexión correcta de los pines y el uso de librerías como `LiquidCrystal` para:
+  - inicializar el monitor
+  - imprimir texto sencillo
+  - desplazar texto
+  - controlar la luz de fondo (backlight)
+  - administrar las coordenadas del cursor
+  - caracteres personalizados
+
+Esta información se obtuvo de [1].
+
+- **Animaciones:** Las pantallas LCD permiten crear e insertar gráficos vectoriales a medida mediante la definición de matrices (arreglos de bytes) de 5x8 píxeles. Estos patrones se dibujan visualmente, se convierten a código binario o hexadecimal, y se guardan en la memoria del dispositivo para mostrar formas únicas. La fuente [2] ensena como crear caracteres personalizados para el proposito de funciones LCD mas dinamicas.
+
+
+---
+
+### OBJ 3: Programación del LCD (texto sencillo, scrolling y animaciones)
+
+#### Texto sencillo
+
+Video: [hello_world.mp4](./media/hello_world.mp4)
+
+Codigo: [lcd_display.ino](./code/lcd_display/lcd_display.ino)
+
+#### Texto scrolling
+
+Video: [autoscroll.mp4](./media/autoscroll.mp4)
+
+Codigo: [lcd_display_autoscroll.ino](./code/lcd_display_autoscroll/lcd_display_autoscroll.ino)
+
+#### Animaciones
+
+Video: [casino_slots.mp4](./media/casino_slots.mp4)
+
+Codigo: [casino_slots.ino](./code/casino_slots/casino_slots.ino)
+
+---
+
+
 ## Referencias
 
-- Cableado y programas básicos: <https://docs.arduino.cc/learn/electronics/lcd-displays/>
-- Caractéres personalizados: <https://naylampmechatronics.com/blog/34_tutorial-lcd-conectando-tu-arduino-a-un-lcd1602-y-lcd2004.html>
-- Números aleatorios: <https://docs.arduino.cc/language-reference/en/functions/random-numbers/randomSeed/>
+[1] Arduino Docs. "LCD Displays." Disponible: https://docs.arduino.cc/learn/electronics/lcd-displays/
+
+[2] Naylamp Mechatronics. "Tutorial LCD: conectando tu Arduino a un LCD1602 y LCD2004." Disponible: https://naylampmechatronics.com/blog/34_tutorial-lcd-conectando-tu-arduino-a-un-lcd1602-y-lcd2004.html
+
+[3] Arduino Reference. "randomSeed()." Disponible: https://docs.arduino.cc/language-reference/en/functions/random-numbers/randomSeed/
+
+[4] Arduino Docs. "UNO R3" Disponible: https://docs.arduino.cc/hardware/uno-rev3/#features
+
+[5] D. Lacamera, Embedded Systems Architecture: Design and write software for embedded devices to build safe and connected systems, 2nd ed. Birmingham, UK: Packt Publishing, 2023. ISBN: 978-1-80323-954-5
 
 Citas APA de IA:
 
