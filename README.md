@@ -49,7 +49,14 @@ Podemos observar que los conectores de **I2C** se dan por medio de los pines ana
 
 ### OBJ 3: Conocimiento sobre los componentes utilizados
 
-TODO @ISA
+- **LCD**
+Este dispositivo es una pantalla de cristal líquido capaz de mostrar dos líneas de texto, con 16 caracteres cada una. Las pantallas LCD contienen muchas capas de materiales. Hay un LED de retroiluminación y un sándwich de vidrio polarizado alrededor de una capa de cristal líquido, la cual puede girar electrónicamente la luz polarizada para que la retroiluminación la atraviese y se vea, o bien para que el filtro polarizador la bloquee en la parte superior.
+- **Potenciómetro**
+Este dispositivo es una resistencia variable controlada por un botón. Un potenciómetro cambia la posición de un contacto móvil en un material resistivo en relación con un contacto estacionario, lo que genera una resistencia cambiante a medida que se mueve el contacto.
+- **Piezo**
+Este dispositivo es un conmutador momentáneo. Un pulsador contiene contactos de metal que se comprimen a la vez cuando se pulsa el botón, lo que permite que fluya la corriente eléctrica. Este pulsador tiene cuatro terminales de cable, organizados en pares que están siempre conectados internamente, y los dos pares entran en contacto cuando se pulsa el botón.
+- **Pushbutton**
+Los piezos son un tipo de zumbador que hace ruido a diferentes frecuencias. Los piezos pueden convertir la corriente eléctrica alterna en sonido (vibración) y viceversa.
 
 ---
 
